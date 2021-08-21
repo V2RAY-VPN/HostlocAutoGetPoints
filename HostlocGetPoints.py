@@ -250,4 +250,3 @@ if __name__ == '__main__':
 
     h = HostlocGetPoints()
     h.hostloc_get_points(usernames, passwords, bot_api, chat_id)
-
