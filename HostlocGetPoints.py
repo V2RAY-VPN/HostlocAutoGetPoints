@@ -112,11 +112,11 @@ class HostlocGetPoints():
 
         if len(test_title) != 0:  # 确保正则匹配到了内容，防止出现数组索引越界的情况
             if test_title[0] != '个人资料 -  全球主机交流论坛 -  Powered by Discuz!':
-                self.tg_text = self.tg_text + '\n第{}个帐户登录失败！\n'.format(number_c)
+                self.tg_text = self.tg_text + '\n😭第{}个帐户登录失败！\n'.format(number_c)
                 print('第{}个帐户登录失败！'.format(number_c))
                 return False
             else:
-                self.tg_text = self.tg_text + '\n第{}个帐户登录成功！\n'.format(number_c)
+                self.tg_text = self.tg_text + '\n😊第{}个帐户登录成功！\n'.format(number_c)
                 print('第{}个帐户登录成功！'.format(number_c))
 
                 # 获取并打印当前账户名
@@ -183,7 +183,7 @@ class HostlocGetPoints():
             res.raise_for_status()
             res.encoding = 'utf-8'
             ## self.tg_text = self.tg_text + '\n程序执行完毕，获取积分过程结束'
-            self.tg_text = self.tg_text + '🚀全球主机交流论坛Hostloc积分升级✈️\n'
+            self.tg_text = self.tg_text + '🚀全球主机交流论坛Hostloc积分升级✈️\n\n'
             self.tg_text = self.tg_text + '当前使用 ip 地址：' + res.text.replace('.', ',') + '\n'
             print('')
             print('*' * 30)
