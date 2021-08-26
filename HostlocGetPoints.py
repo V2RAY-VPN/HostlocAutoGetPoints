@@ -183,7 +183,7 @@ class HostlocGetPoints():
             res.raise_for_status()
             res.encoding = 'utf-8'
             ## self.tg_text = self.tg_text + '\n程序执行完毕，获取积分过程结束'
-            self.tg_text = self.tg_text + '🚀全球主机交流论坛Hostloc积分升级✈️\n\n' + '\n'
+            self.tg_text = self.tg_text + '🚀全球主机交流论坛Hostloc积分升级✈️' + '\n'
             self.tg_text = self.tg_text + '当前使用 ip 地址：' + res.text.replace('.', ',') + '\n'
             print('')
             print('*' * 30)
@@ -242,7 +242,7 @@ class HostlocGetPoints():
                     print('*' * 30)
                 continue
             self.tg_text = self.tg_text + '\n程序执行完毕，获取积分过程结束'
-            print('程序执行完毕，获取积分过程结束')
+            print('✅程序执行完毕，获取积分过程结束')
 #         print(self.tg_text)
         self.post(bot_api, chat_id, self.tg_text)
 
