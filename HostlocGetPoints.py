@@ -183,9 +183,13 @@ class HostlocGetPoints():
             res.raise_for_status()
             res.encoding = 'utf-8'
             self.tg_text = self.tg_text + '当前使用 ip 地址：' + res.text.replace('.', ',') + '\n'
+            print('🚀全球主机交流论坛Hostloc积分升级✈️')
+            print('*' * 30)
             print('当前使用 ip 地址：' + res.text)
         except Exception as e:
             self.tg_text = self.tg_text + '获取当前 ip 地址失败：' + str(e) + '\n'
+            print('🚀全球主机交流论坛Hostloc积分升级✈️')
+            print('*' * 30)
             print('获取当前 ip 地址失败：' + str(e))
 
     # TG推送
